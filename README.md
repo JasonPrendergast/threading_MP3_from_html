@@ -1,7 +1,7 @@
 # threading_MP3_from_html
 threading_MP3_from_html
 
-# Rrquires
+# Requires
 speech_recognition
 gtts
 lxml 
