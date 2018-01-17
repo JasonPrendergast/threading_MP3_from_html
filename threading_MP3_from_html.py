@@ -36,12 +36,16 @@ class Listening:
                     pass
 
 #
-#class split string use first words to discard or create action
+#Threading split string use first words to discard or create action
 #Looking for keywords as first word this can be list can be changed to
 #add more commands:
 # OS = computer
 #Wiki = who and what
 #google = search
+#make youtube vidio output = string array qGetHTML
+#
+#input = string qTextinput
+#output = string array in related action queue
 #
 class qtextinput_Consumer:
     def __init__(self):
@@ -72,7 +76,12 @@ class qtextinput_Consumer:
                     self.nextTime+=(random.random())/10
                     pass
 #
-#class qGetHTML_Consumer output = title text and main text
+#class qGetHTML_Consumer 
+#Scape that html
+#
+#input = string array with element 2 as url qGetHTML
+#output = content html qClean_content_for_tts 
+#planned output = title as well
 #
 
 class qGetHTML_Consumer:
@@ -102,12 +111,9 @@ class qGetHTML_Consumer:
 
                     
                     with print_lock:
-                       # print(self.localtextarray[0])
-                        #print(self.localtextarray[1])
-                        #print(self.incomingarray[2])
-                        #print(content)
+                       
                         print('qGetHTML')
-                       # print(str())
+                       
                     qClean_content_for_tts.put(content)
                     qClean_title_for_tts.put(title)
                     self.nextTime+=(random.random())*10/1
@@ -118,7 +124,11 @@ class qGetHTML_Consumer:
                     self.nextTime+=(random.random())*10/1
                     pass
 
-
+#
+#Scrub content to text format I want
+#inpur = HTML from qClean_content_for_tts
+#output = main text qCreateaudio_from_text
+#
 class qClean_content_for_tts_Consumer:
     def __init__(self):
         self.nextTime=0
