@@ -126,7 +126,7 @@ class qGetHTML_Consumer:
 
 #
 #Scrub content to text format I want
-#inpur = HTML from qClean_content_for_tts
+#input = HTML from qClean_content_for_tts
 #output = main text qCreateaudio_from_text
 #
 class qClean_content_for_tts_Consumer:
