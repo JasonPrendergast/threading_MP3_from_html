@@ -179,7 +179,7 @@ class qClean_content_for_tts_Consumer:
 
 
 #use tts to create audio
-#inpur =  main text qCreateaudio_from_text
+#input =  main text qCreateaudio_from_text
 #output = audio'+str(self.title)+'.mp3
 #
 class qCreateaudio_from_text_Consumer:
@@ -291,7 +291,7 @@ if __name__ == "__main__":
     qClean_content_for_tts_ct.start()
     
     #use tts to create audio
-    #inpur =  main text qCreateaudio_from_text
+    #input =  main text qCreateaudio_from_text
     #output = qTTSaudio
     #
     qCreateaudio_from_text_c=qCreateaudio_from_text_Consumer()
